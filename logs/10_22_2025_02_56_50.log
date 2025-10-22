@@ -1,0 +1,16 @@
+[ 2025-10-22 02:56:50,733 ] 53 root - INFO - Read train and test data completed
+[ 2025-10-22 02:56:50,733 ] 55 root - INFO - Obtaining preprocessing object
+[ 2025-10-22 02:56:50,733 ] 38 root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[ 2025-10-22 02:56:50,733 ] 39 root - INFO - Numerical columns: ['writing_score', 'reading_score']
+[ 2025-10-22 02:56:50,735 ] 66 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2025-10-22 02:56:50,744 ] 81 root - INFO - Saved preprocessing object
+[ 2025-10-22 02:56:50,752 ] 65 root - INFO - Splitting dependent and independent variables from train and test data
+[ 2025-10-22 02:56:50,765 ] 51 root - INFO - Trained Linear Regression | R2: 0.8804
+[ 2025-10-22 02:56:50,815 ] 51 root - INFO - Trained KNN | R2: 0.4756
+[ 2025-10-22 02:56:50,818 ] 51 root - INFO - Trained Decision Tree | R2: 0.7227
+[ 2025-10-22 02:56:50,983 ] 51 root - INFO - Trained Random Forest | R2: 0.8547
+[ 2025-10-22 02:56:51,028 ] 51 root - INFO - Trained Gradient Boosting | R2: 0.8721
+[ 2025-10-22 02:56:51,061 ] 51 root - INFO - Trained AdaBoost | R2: 0.8425
+[ 2025-10-22 02:56:51,143 ] 51 root - INFO - Trained XGBoost | R2: 0.8231
+[ 2025-10-22 02:56:51,435 ] 51 root - INFO - Trained CatBoost | R2: 0.8524
+[ 2025-10-22 02:56:51,435 ] 103 root - INFO - Best model: Linear Regression | R2: 0.8804 | Saved to: artifacts/model.pkl
