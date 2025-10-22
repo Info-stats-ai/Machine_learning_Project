@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: mlproject
+Version: 0.1.0
+Summary: End to End ML project
+Author: Omkar Thakur
+Author-email: othakur@umd.edu
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: seaborn
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: summary

@@ -1,0 +1,5 @@
+pandas
+numpy
+seaborn
+# enabling the runnning of step.py file
+-e .
