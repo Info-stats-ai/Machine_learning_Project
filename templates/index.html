@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Performance Prediction</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; margin: 24px; }
+      .container { max-width: 800px; margin: 0 auto; }
+      form { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+      label { font-weight: 600; }
+      input, select, button { padding: 8px; font-size: 14px; }
+      .full { grid-column: 1 / -1; }
+      .card { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; }
+      .result { margin-top: 16px; font-size: 18px; font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Predict Math Score</h1>
+      <div class="card">
+        <form method="post" action="/predict">
+          <div>
+            <label>Gender</label>
+            <select name="gender" required>
+              <option value="male" {{ 'selected' if values and values.get('gender')=='male' else '' }}>male</option>
+              <option value="female" {{ 'selected' if values and values.get('gender')=='female' else '' }}>female</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Race/Ethnicity</label>
+            <select name="race_ethnicity" required>
+              <option value="group A">group A</option>
+              <option value="group B">group B</option>
+              <option value="group C">group C</option>
+              <option value="group D">group D</option>
+              <option value="group E">group E</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Parental Level of Education</label>
+            <select name="parental_level_of_education" required>
+              <option value="some high school">some high school</option>
+              <option value="high school">high school</option>
+              <option value="some college">some college</option>
+              <option value="associate's degree">associate's degree</option>
+              <option value="bachelor's degree">bachelor's degree</option>
+              <option value="master's degree">master's degree</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Lunch</label>
+            <select name="lunch" required>
+              <option value="standard">standard</option>
+              <option value="free/reduced">free/reduced</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Test Preparation Course</label>
+            <select name="test_preparation_course" required>
+              <option value="none">none</option>
+              <option value="completed">completed</option>
+            </select>
+          </div>
+
+          <div>
+            <label>Reading Score</label>
+            <input type="number" name="reading_score" step="1" min="0" max="100" required value="{{ values.get('reading_score') if values else '' }}">
+          </div>
+
+          <div>
+            <label>Writing Score</label>
+            <input type="number" name="writing_score" step="1" min="0" max="100" required value="{{ values.get('writing_score') if values else '' }}">
+          </div>
+
+          <div class="full">
+            <button type="submit">Predict</button>
+          </div>
+        </form>
+
+        {% if prediction is defined %}
+        <div class="result">Predicted Math Score: {{ prediction }}</div>
+        {% endif %}
+      </div>
+    </div>
+  </body>
+  </html>
+
+

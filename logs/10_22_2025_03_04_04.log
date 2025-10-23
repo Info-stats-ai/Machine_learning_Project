@@ -1,0 +1,3 @@
+[ 2025-10-22 03:04:04,410 ] 46 root - INFO - Starting model evaluation on test data
+[ 2025-10-22 03:04:04,493 ] 58 root - INFO - Loaded model and preprocessor
+[ 2025-10-22 03:04:04,503 ] 93 root - INFO - Evaluation completed | R2: 0.8804, MAE: 4.2148, RMSE: 5.3940 | Report saved to artifacts/evaluation_report.json

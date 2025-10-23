@@ -4,6 +4,7 @@ import dill
 from src.exception import CustomException
 import os
 import sys
+
 def save_object(file_path, obj):
     try:
         dir_path = os.path.dirname(file_path)

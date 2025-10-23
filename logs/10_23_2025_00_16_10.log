@@ -1,0 +1,31 @@
+[ 2025-10-23 00:16:10,333 ] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8081
+ * Running on http://10.1.7.134:8081
+[ 2025-10-23 00:16:10,334 ] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2025-10-23 00:16:10,334 ] 97 werkzeug - INFO -  * Restarting with stat
+[ 2025-10-23 00:16:10,560 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-10-23 00:16:10,571 ] 97 werkzeug - INFO -  * Debugger PIN: 904-001-682
+[ 2025-10-23 00:16:28,637 ] 27 root - INFO - GET / → render form
+[ 2025-10-23 00:16:28,649 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Oct/2025 00:16:28] "GET / HTTP/1.1" 200 -
+[ 2025-10-23 00:16:28,928 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Oct/2025 00:16:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-10-23 00:17:02,529 ] 34 root - INFO - POST /predict → received form
+[ 2025-10-23 00:17:02,532 ] 46 root - INFO - Form row: {'gender': 'male', 'race_ethnicity': 'group A', 'parental_level_of_education': 'high school', 'lunch': 'standard', 'test_preparation_course': 'completed', 'reading_score': 50.0, 'writing_score': 100.0}
+[ 2025-10-23 00:17:03,926 ] 57 root - INFO - Prediction: 90.80769534948283
+[ 2025-10-23 00:17:03,926 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Oct/2025 00:17:03] "POST /predict HTTP/1.1" 200 -
+[ 2025-10-23 00:17:11,688 ] 34 root - INFO - POST /predict → received form
+[ 2025-10-23 00:17:11,689 ] 46 root - INFO - Form row: {'gender': 'male', 'race_ethnicity': 'group A', 'parental_level_of_education': 'some high school', 'lunch': 'standard', 'test_preparation_course': 'completed', 'reading_score': 50.0, 'writing_score': 100.0}
+[ 2025-10-23 00:17:11,699 ] 57 root - INFO - Prediction: 90.63485324287515
+[ 2025-10-23 00:17:11,700 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Oct/2025 00:17:11] "POST /predict HTTP/1.1" 200 -
+[ 2025-10-23 00:17:16,306 ] 34 root - INFO - POST /predict → received form
+[ 2025-10-23 00:17:16,307 ] 46 root - INFO - Form row: {'gender': 'male', 'race_ethnicity': 'group A', 'parental_level_of_education': 'some college', 'lunch': 'standard', 'test_preparation_course': 'none', 'reading_score': 50.0, 'writing_score': 100.0}
+[ 2025-10-23 00:17:16,315 ] 57 root - INFO - Prediction: 94.1668815902557
+[ 2025-10-23 00:17:16,316 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Oct/2025 00:17:16] "POST /predict HTTP/1.1" 200 -
+[ 2025-10-23 00:17:25,897 ] 34 root - INFO - POST /predict → received form
+[ 2025-10-23 00:17:25,898 ] 46 root - INFO - Form row: {'gender': 'male', 'race_ethnicity': 'group A', 'parental_level_of_education': 'some high school', 'lunch': 'standard', 'test_preparation_course': 'none', 'reading_score': 80.0, 'writing_score': 70.0}
+[ 2025-10-23 00:17:25,903 ] 57 root - INFO - Prediction: 79.28073442155124
+[ 2025-10-23 00:17:25,904 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Oct/2025 00:17:25] "POST /predict HTTP/1.1" 200 -
+[ 2025-10-23 00:17:29,603 ] 34 root - INFO - POST /predict → received form
+[ 2025-10-23 00:17:29,603 ] 46 root - INFO - Form row: {'gender': 'male', 'race_ethnicity': 'group D', 'parental_level_of_education': 'some high school', 'lunch': 'standard', 'test_preparation_course': 'none', 'reading_score': 80.0, 'writing_score': 70.0}
+[ 2025-10-23 00:17:29,611 ] 57 root - INFO - Prediction: 78.66749818113104
+[ 2025-10-23 00:17:29,611 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Oct/2025 00:17:29] "POST /predict HTTP/1.1" 200 -

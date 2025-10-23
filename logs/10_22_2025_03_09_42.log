@@ -1,0 +1,8 @@
+[ 2025-10-22 03:09:42,257 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-10-22 03:09:42,271 ] 97 werkzeug - INFO -  * Debugger PIN: 398-820-065
+[ 2025-10-22 03:10:17,784 ] 27 root - INFO - GET / → render form
+[ 2025-10-22 03:10:17,787 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Oct/2025 03:10:17] "GET / HTTP/1.1" 200 -
+[ 2025-10-22 03:10:24,874 ] 34 root - INFO - POST /predict → received form
+[ 2025-10-22 03:10:24,875 ] 46 root - INFO - Form row: {'gender': 'female', 'race_ethnicity': 'group B', 'parental_level_of_education': "bachelor's degree", 'lunch': 'standard', 'test_preparation_course': 'none', 'reading_score': 72.0, 'writing_score': 74.0}
+[ 2025-10-22 03:10:25,571 ] 57 root - INFO - Prediction: 66.11021331622095
+[ 2025-10-22 03:10:25,571 ] 97 werkzeug - INFO - 127.0.0.1 - - [22/Oct/2025 03:10:25] "POST /predict HTTP/1.1" 200 -
