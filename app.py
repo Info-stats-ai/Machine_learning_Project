@@ -3,6 +3,8 @@ import pandas as pd
 import os
 import pickle
 import dill
+# dill is a library that allows you to serialize and deserialize Python objects
+# it helps to save the model and preprocessor in a pickle file
 
 from src.logged.logger import logging
 from src.exception import CustomException
