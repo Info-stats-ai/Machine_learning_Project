@@ -1,0 +1,33 @@
+[ 2025-10-23 02:09:49,606 ] 9 root - INFO - Pipeline: start
+[ 2025-10-23 02:09:49,606 ] 6 root - INFO - Stage 01: Data Ingestion — started
+[ 2025-10-23 02:09:49,606 ] 20 root - INFO - Entered the data ingestion method or component
+[ 2025-10-23 02:09:49,610 ] 23 root - INFO - Read the dataset as dataframe
+[ 2025-10-23 02:09:49,612 ] 28 root - INFO - Train test split initiated
+[ 2025-10-23 02:09:49,616 ] 33 root - INFO - Ingestion of data is completed
+[ 2025-10-23 02:09:49,616 ] 8 root - INFO - Stage 01: Data Ingestion — done | train=artifacts/train.csv test=artifacts/test.csv
+[ 2025-10-23 02:09:49,617 ] 6 root - INFO - Stage 02: Data Transformation — started
+[ 2025-10-23 02:09:49,618 ] 53 root - INFO - Read train and test data completed
+[ 2025-10-23 02:09:49,618 ] 55 root - INFO - Obtaining preprocessing object
+[ 2025-10-23 02:09:49,618 ] 38 root - INFO - Categorical columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[ 2025-10-23 02:09:49,618 ] 39 root - INFO - Numerical columns: ['writing_score', 'reading_score']
+[ 2025-10-23 02:09:49,618 ] 66 root - INFO - Applying preprocessing object on training dataframe and testing dataframe.
+[ 2025-10-23 02:09:49,625 ] 81 root - INFO - Saved preprocessing object
+[ 2025-10-23 02:09:49,625 ] 10 root - INFO - Stage 02: Data Transformation — done | preprocessor=artifacts/preprocessor.pkl
+[ 2025-10-23 02:09:49,625 ] 6 root - INFO - Stage 03: Model Training — started
+[ 2025-10-23 02:09:49,625 ] 65 root - INFO - Splitting dependent and independent variables from train and test data
+[ 2025-10-23 02:09:49,632 ] 51 root - INFO - Trained Linear Regression | R2: 0.8804
+[ 2025-10-23 02:09:49,634 ] 51 root - INFO - Trained KNN | R2: 0.7754
+[ 2025-10-23 02:09:49,636 ] 51 root - INFO - Trained Decision Tree | R2: 0.7435
+[ 2025-10-23 02:09:49,741 ] 51 root - INFO - Trained Random Forest | R2: 0.8516
+[ 2025-10-23 02:09:49,782 ] 51 root - INFO - Trained Gradient Boosting | R2: 0.8726
+[ 2025-10-23 02:09:49,813 ] 51 root - INFO - Trained AdaBoost | R2: 0.8497
+[ 2025-10-23 02:09:49,895 ] 51 root - INFO - Trained XGBoost | R2: 0.8230
+[ 2025-10-23 02:09:50,140 ] 51 root - INFO - Trained CatBoost | R2: 0.8502
+[ 2025-10-23 02:09:50,141 ] 103 root - INFO - Best model: Linear Regression | R2: 0.8804 | Saved to: artifacts/model.pkl
+[ 2025-10-23 02:09:50,141 ] 8 root - INFO - Stage 03: Model Training — done | best=Linear Regression r2=0.8804 model=artifacts/model.pkl
+[ 2025-10-23 02:09:50,141 ] 6 root - INFO - Stage 04: Model Evaluation — started
+[ 2025-10-23 02:09:50,142 ] 46 root - INFO - Starting model evaluation on test data
+[ 2025-10-23 02:09:50,142 ] 58 root - INFO - Loaded model and preprocessor
+[ 2025-10-23 02:09:50,145 ] 93 root - INFO - Evaluation completed | R2: 0.8804, MAE: 4.2148, RMSE: 5.3940 | Report saved to artifacts/evaluation_report.json
+[ 2025-10-23 02:09:50,145 ] 8 root - INFO - Stage 04: Model Evaluation — done | {'r2_score': 0.8804332983749564, 'mae': 4.214763142474853, 'mse': 29.09516986671551, 'rmse': 5.393993869732845, 'num_test_samples': 200}
+[ 2025-10-23 02:09:50,145 ] 14 root - INFO - Pipeline: done | best=Linear Regression r2=0.8804 | pre=artifacts/preprocessor.pkl | report={'r2_score': 0.8804332983749564, 'mae': 4.214763142474853, 'mse': 29.09516986671551, 'rmse': 5.393993869732845, 'num_test_samples': 200}
