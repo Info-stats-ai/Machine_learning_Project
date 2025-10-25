@@ -5,6 +5,7 @@ matplotlib
 scikit-learn
 catboost
 xgboost
+gunicorn
 
 # enabling the runnning of step.py file
 #-e .
