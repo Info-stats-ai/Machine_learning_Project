@@ -262,8 +262,7 @@ Contributions welcome! Areas for improvement:
 - Feature engineering (interaction terms, polynomial features)
 - Model ensembling and stacking
 - API rate limiting and authentication
-- Docker containerization
-- Advanced monitoring and alerting
+
 
 ## 📄 License
 
