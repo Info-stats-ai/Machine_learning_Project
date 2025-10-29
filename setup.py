@@ -16,5 +16,5 @@ setup(
     description='End to End ML project',
     author='Omkar Thakur',
     author_email='othakur@umd.edu',
-    install_requires=get_requirements('Requirements.txt'),
+    install_requires=get_requirements('requirements.txt'),
 )

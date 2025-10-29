@@ -70,7 +70,7 @@ def predict():
 
 if __name__ == "__main__":
     # For local dev: FLASK_RUN_HOST=0.0.0.0 FLASK_RUN_PORT=8080 flask run
-    port = int(os.getenv("PORT", "8080"))
+    port = int(os.getenv("PORT", "8081"))
     app.run(host="0.0.0.0", port=port)
 
 

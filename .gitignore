@@ -1,1 +1,33 @@
 venv/
+
+# Python
+*.pyc
+__pycache__/
+*.egg-info/
+
+# AWS Elastic Beanstalk
+.elasticbeanstalk/
+*.pem
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+
+# Environment
+.env
+
+# Deployment
+deploy.zip
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

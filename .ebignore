@@ -1,0 +1,19 @@
+# Exclude these from deployment to AWS
+venv/
+*.pyc
+__pycache__/
+.git/
+.github/
+*.log
+logs/
+.DS_Store
+.env
+*.egg-info/
+.vscode/
+.idea/
+*.swp
+*.swo
+research/
+catboost_info/
+*.ipynb
+
