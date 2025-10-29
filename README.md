@@ -152,21 +152,32 @@ Access at: `http://localhost:8080`
 
 ### AWS Elastic Beanstalk Deployment
 
-**Configuration:**
-- Platform: Python 3.x
-- WSGI Application: `application:application`
-- Configuration: `.ebextensions/python.config`
+**Platform:** Python 3.13 on Amazon Linux 2023
 
-**Deployment Steps:**
-1. Initialize EB CLI: `eb init -p python-3.x ml-project`
-2. Create environment: `eb create ml-env`
-3. Deploy updates: `eb deploy`
-4. Open app: `eb open`
+#### **Quick Deploy:**
+```bash
+pip install awsebcli && aws configure
+eb init -p python-3.13 student-predict --region us-east-1
+eb create student-predict-env --instance-type t2.micro
+eb open
+```
 
-**CI/CD Pipeline:**
-- Managed manually via EB CLI
-- Automated artifact generation on deployment
-- Health monitoring and auto-scaling enabled
+#### **Key Challenge & Solution:**
+- **Problem:** Deployment failed due to heavy packages (catboost, xgboost) requiring compilation
+- **Solution:** Removed training packages from `requirements.txt` - model is pre-trained, only needs prediction dependencies
+
+**Production packages:** flask, pandas, numpy, scikit-learn, gunicorn, dill
+
+---
+
+### **CI/CD with GitHub Actions**
+
+**Auto-deploy on push to `main`**
+
+1. Add AWS credentials to GitHub Secrets: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`
+2. Push code → GitHub Actions deploys automatically (~5 min)
+
+**Files:** `Procfile`, `.ebignore`, `.github/workflows/deploy.yml`
 
 ## 🛠️ Technologies Used
 
@@ -185,9 +196,10 @@ Access at: `http://localhost:8080`
 - AWS EC2: Compute instances
 - AWS S3: Artifact storage (optional)
 
-**Development:**
+**Development & DevOps:**
 - Python 3.13
-- Git: Version control
+- Git & GitHub: Version control
+- GitHub Actions: CI/CD automation
 - Logging: Custom logging framework
 
 ## 📝 Usage
@@ -262,7 +274,8 @@ Contributions welcome! Areas for improvement:
 - Feature engineering (interaction terms, polynomial features)
 - Model ensembling and stacking
 - API rate limiting and authentication
-
+- Unit tests and integration tests
+- Load testing and performance optimization
 
 ## 📄 License
 
@@ -282,6 +295,6 @@ This project is open source and available under the MIT License.
 
 ---
 
-**Project Status:** ✅ Production Ready
+**Project Status:** ✅ Production Ready with CI/CD
 
-**Last Updated:** October 2025
+**Last Updated:** October 29, 2025
